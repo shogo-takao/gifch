@@ -1,1 +1,7 @@
 # gifch
+
+```
+$ yarn
+
+$ yarn start
+```
