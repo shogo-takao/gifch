@@ -6,6 +6,11 @@
   >
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({})
+</script>
+
 <style>
 .VuetifyLogo {
   width: 180px;
