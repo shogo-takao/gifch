@@ -30,6 +30,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/firebase',
+    '@/plugins/auth'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -41,7 +43,15 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/dotenv',
+    '@nuxtjs/pwa'
   ],
+  // PWA manifest
+  manifest: {
+    name: 'gifch',
+    short_name: 'gifch',
+    lang: 'ja'
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
