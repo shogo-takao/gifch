@@ -18,10 +18,7 @@ import Nav from '~/components/organisms/Nav/Nav.vue'
 export default Vue.extend({
   components: {
     Nav
-  },
-  created () {
-    this.$vuetify.theme.dark = true
-  },
+  }
 })
 </script>
 

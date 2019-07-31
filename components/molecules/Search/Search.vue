@@ -10,14 +10,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  name: 'Search',
-  data () {
-    return {
-      valid: false,
-      searchValue: "",
-    }
-  }
-})
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component
+export default class Search extends Vue {
+  valid: boolean = false
+  searchValue: string = ""
+}
 </script>

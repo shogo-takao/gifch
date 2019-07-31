@@ -6,19 +6,16 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from 'vue'
+import { Component, Vue, Prop } from 'vue-property-decorator'
+import { PropType } from 'vue'
 
 export interface Item {
   iconName: String,
   name: String
 }
 
-export default Vue.extend({
-  name: 'NavItem',
-  props: {
-    item: {
-      type: Object as PropType<Item>
-    }
-  }
-})
+@Component
+export default class NavItem extends Vue {
+  @Prop(Object) readonly item!: Item
+}
 </script>

@@ -5,16 +5,17 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from 'vue'
+import { Component, Vue, Prop } from 'vue-property-decorator'
 import NavItem, { Item } from '@/components/atoms/NavItem/NavItem.vue'
 
-export default Vue.extend({
-  name: 'NavMenu',
-  components: { NavItem },
-  props: {
-    menus: Array as PropType<Item[]>
+@Component({
+  components: {
+    NavItem
   }
 })
+export default class NavMenu extends Vue {
+  @Prop({ type: Array, required: true }) private menus!: Item[]
+}
 </script>
 
 <style lang="scss" scoped>
