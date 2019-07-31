@@ -12,30 +12,29 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'vue-property-decorator'
 import NavMenu from '@/components/molecules/NavMenu/NavMenu.vue'
 import Search from '@/components/molecules/Search/Search.vue'
+import { Item } from '@/components/atoms/NavItem/NavItem.vue'
 
-export default Vue.extend({
-  name: 'Nav',
-  components: { NavMenu, Search },
-  data () {
-    return {
-      menus: [
-        {
-          iconName: "mdi-home",
-          name: "ホーム"
-        },
-        {
-          iconName: "mdi-star",
-          name: "お気に入り"
-        }
-      ]
-    }
+@Component({
+  components: {
+    NavMenu,
+    Search
   }
 })
+export default class Nav extends Vue {
+  menus: Array<Item> = [
+    {
+      iconName: "mdi-home",
+      name: "ホーム"
+    },
+    {
+      iconName: "mdi-star",
+      name: "お気に入り"
+    }
+  ]
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
