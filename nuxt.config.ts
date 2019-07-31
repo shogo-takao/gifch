@@ -27,6 +27,7 @@ const config: NuxtConfiguration = {
   ** Global CSS
   */
   css: [
+    '@/assets/scss/base/_bundle.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -60,10 +61,7 @@ const config: NuxtConfiguration = {
   */
   vuetify: {
     theme: {
-      primary: '#3f51b5',
-      secondary: '#b0bec5',
-      accent: '#8c9eff',
-      error: '#b71c1c'
+      dark: true
     }
   },
   /*

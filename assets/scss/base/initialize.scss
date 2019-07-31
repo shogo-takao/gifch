@@ -1,0 +1,55 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  outline: none;
+}
+
+picture {
+  display: block;
+}
+
+input,
+option,
+textarea,
+button {
+  outline: none;
+  border: none;
+  border-radius: 0;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+hr {
+  margin: 0;
+  border: none;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.v-application--wrap {
+  display: flex !important;
+  flex-direction: initial !important;
+}

@@ -1,9 +1,9 @@
 <template>
-  <v-app dark>
+  <v-app class="App">
     <div class="App-nav">
       <Nav />
     </div>
-    <v-content>
+    <v-content class="App-main">
       <v-container>
         <nuxt />
       </v-container>
@@ -26,9 +26,17 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.App-nav {
-  width: 300px;
-  height: 100vh;
-  border-right: 1px solid rgb(190, 190, 190);
+.App {
+  display: flex;
+
+  &-nav {
+    width: 300px;
+    height: 100vh;
+  }
+
+  &-main {
+    width: calc(100% - 300px);
+    border-left: 1px solid rgb(190, 190, 190);
+  }
 }
 </style>
