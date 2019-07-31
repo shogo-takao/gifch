@@ -1,6 +1,6 @@
 <template>
-  <v-flex my-4 mx-3>
-    <v-icon class="NavItem-iconName">{{ item.iconName }}</v-icon>
+  <v-flex my-4 mx-3 class="d-flex align-center">
+    <v-icon class="NavItem-iconName mr-2">{{ item.iconName }}</v-icon>
     <div class="subtitile-1 d-inline-block NavItem-name">{{ item.name }}</div>
   </v-flex>
 </template>
