@@ -71,8 +71,19 @@ const config: NuxtConfiguration = {
     /*
     ** You can extend webpack config here
     */
-    // extend(config, ctx) {
-    // }
+    extend(config: any, ctx: any) {
+      config.module.rules.push({
+        test: /\.ts$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+          transpileOnly: true,
+          allowTsInNodeModules: true
+        }
+      })
+      config.resolve.extensions.push('.ts')
+    }
   }
 }
 

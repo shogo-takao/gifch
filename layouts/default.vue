@@ -12,14 +12,16 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'vue-property-decorator'
+
 import Nav from '~/components/organisms/Nav/Nav.vue'
 
-export default Vue.extend({
+@Component({
   components: {
     Nav
   }
 })
+export default class Search extends Vue {}
 </script>
 
 <style lang="scss" scoped>
